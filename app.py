@@ -168,7 +168,7 @@ else:
         # Visual confirmation that the math balances out perfectly (adjusted tolerance to match 4 decimal precision)
         if total_final_mol_pct < 99.99 or total_final_mol_pct > 100.00:
             st.error(
-                f"⚠️ Blended Total: {total_final_mol_pct:.4f}%.\n\n"
+                f"⚠️ Blended Total: {total_final_mol_pct:.2f}%.\n\n"
                 "Adjust it 100% before using the blended profile in calculations."
             )
         elif total_final_mol_pct == 100.00:
