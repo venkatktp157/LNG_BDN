@@ -171,7 +171,7 @@ else:
                 f"⚠️ Blended Total: {total_final_mol_pct:.4f}%.\n\n"
                 "Adjust it 100% before using the blended profile in calculations."
             )
-        else:
+        elif total_final_mol_pct == 100.00:
             st.success(f"✅ Blended Total: {total_final_mol_pct:.2f}%")
         
         methane_label = default_constituents[0][0]
