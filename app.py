@@ -165,6 +165,8 @@ else:
     with res_col2:
         st.metric(label=f"Total Combined Quantity ({unit_basis})", value=f"{total_quantity:,.2f}")
 
+        rounded_total = round(total_final_mol_pct, 4)
+
         # Visual confirmation that the math balances out perfectly (adjusted tolerance to match 4 decimal precision)
         if total_final_mol_pct < 99.99 or total_final_mol_pct > 100.00:
             st.error(
