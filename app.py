@@ -45,9 +45,9 @@ default_constituents = [
 
 # Baseline lab results to auto-populate BDN 1 for easy verification
 bdn1_defaults = {
-    "Methane (CH4)": 94.6938, "Ethane (C2H6)": 3.8850, "Propane (C3H8)": 1.0555,
-    "iso-Butane (i-C4H10)": 0.1788, "n-Butane (n-C4H10)": 0.1602, "iso-Pentane (i-C5H12)": 0.0037,
-    "n-Pentane (n-C5H12)": 0.0010, "n-Hexane (n-C6H14)": 0.0000, "Nitrogen (N2)": 0.0221,
+    "Methane (CH4)": 0.0000, "Ethane (C2H6)": 0.0000, "Propane (C3H8)": 0.0000,
+    "iso-Butane (i-C4H10)": 0.0000, "n-Butane (n-C4H10)": 0.0000, "iso-Pentane (i-C5H12)": 0.0000,
+    "n-Pentane (n-C5H12)": 0.0000, "n-Hexane (n-C6H14)": 0.0000, "Nitrogen (N2)": 0.0000,
     "Sulphur": 0.00
 }
 
@@ -71,7 +71,7 @@ for i in range(num_bdns):
             default_label = f"Bunker Stream {i+1}"
             
         bdn_name = st.text_input(f"Fuel Label", value=default_label, key=f"bdn_name_{i}")
-        qty = st.number_input(f"Quantity ({unit_basis})", min_value=0.0, value=400.0, step=50.0, key=f"qty_{i}")
+        qty = st.number_input(f"Quantity ({unit_basis})", min_value=0.0, value=0.0,step=50.0, key=f"qty_{i}")
         
         st.markdown("**Composition Breakdowns**")
         comp = {}
@@ -82,9 +82,9 @@ for i in range(num_bdns):
             if i == 0 and g_name in bdn1_defaults:
                 default_val = bdn1_defaults[g_name]
             elif i > 0 and g_name == "Methane (CH4)":
-                default_val = 98.00 if i == 1 else 95.00
+                default_val = 0.00 #if i == 1 else 95.00
             elif i > 0 and g_name == "Nitrogen (N2)":
-                default_val = 2.00 if i == 1 else 5.00
+                default_val = 0.00 #if i == 1 else 5.00
             else:
                 default_val = 0.00
                 
