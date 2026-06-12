@@ -175,6 +175,9 @@ else:
             )
         elif total_final_mol_pct == 100.00:
             st.success(f"✅ Blended Total: {total_final_mol_pct:.2f}%")
+
+        else:
+            st.info(f"ℹ️ Blended Total: {rounded_total:.2f}%")    
         
         methane_label = default_constituents[0][0]
         st.metric(label=f"Blended {methane_label} Profile", value=f"{final_blend[methane_label]:.4f} mol%")
