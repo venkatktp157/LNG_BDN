@@ -1,0 +1,5 @@
+ During LNG bunkering, vessels may receive multiple grades of LNG—for example, Grey LNG and Bio‑LNG—each accompanied by its own BDN and distinct constituent compositions. For methane number calculations, the LNG composition must be entered accurately. However, when several grades are supplied in a single bunkering operation, multiple composition sets come into play.
+
+To ensure correct methane number computation, the individual compositions must be consolidated into a single representative composition. This is achieved by calculating the mass‑weighted average of each constituent based on the quantity of LNG supplied (in MT) for each grade.
+
+The application automates this process by aggregating all supplied LNG grades, applying the appropriate mass‑based weighting, and generating a unified constituent composition. This consolidated dataset can then be directly used for methane number calculations, ensuring accuracy and consistency across varying bunkering scenarios.
